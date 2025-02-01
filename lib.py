@@ -6,7 +6,8 @@ liste = [
     "requests",
     "json5", 
     "python-dotenv",
-    "google-cloud"
+    "google-cloud",
+    "google-cloud-bigquery-connection"
 ] 
 
 for i in liste :
