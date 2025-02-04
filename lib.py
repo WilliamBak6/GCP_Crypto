@@ -9,7 +9,9 @@ liste = [
     "google-cloud",
     "google-cloud-bigquery-connection",
     "google-cloud-storage",
-    "google-api-python-client"
+    "google-api-python-client",
+    "dbt-core",
+    "dbt-bigquery"
 ] 
 
 for i in liste :
