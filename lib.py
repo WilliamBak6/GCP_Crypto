@@ -10,6 +10,7 @@ liste = [
     "google-cloud-bigquery-connection",
     "google-cloud-storage",
     "google-api-python-client",
+    "google-cloud-bigquery",
     "dbt-core",
     "dbt-bigquery"
 ] 
