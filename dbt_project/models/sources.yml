@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw_cryptocurrencies_list
+    description: "Raw data from my database"
+    schema: raw_cryptocurrencies_list
+    tables: 
+      - name: raw_coincap_currencies
+      - name: raw_coincap_prices
+      - name: raw_coinlore_coins
+
+ 

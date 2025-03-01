@@ -1,0 +1,14 @@
+
+version: 2
+
+models:
+  - name: load_coincap_currencies
+    description: "A model which is listing the top coins and prices from different API"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+    config:
+      materialized: table
