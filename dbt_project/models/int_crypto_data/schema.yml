@@ -10,4 +10,8 @@ models:
           - unique
           - not_null
     config:
+      materialized: 
+      
+  - name: int_coincap_prices
+    config: 
       materialized: view

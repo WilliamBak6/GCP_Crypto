@@ -31,13 +31,17 @@ for i in liste:
     url = "https://api.coincap.io/v2/assets/{coin}/history?interval=d1&start={start}&end={end}".format(coin=i, start=ts_start, end=ts_now)
 
     response = requests.get(url)
-    # print(response.status_code)
+    # print(response.content)
 
     data0 = response.json()["data"]
-    df1 = pd.DataFrame(data0)
+    # data0 = json.dumps(data0)
+    # data0 = json.loads(data0)
+    df1 = pd.DataFrame(list(data0))
     df1["id"] = i
     df = pd.concat([df, df1])
 
+df = df.iloc[:, 0:4]
+print(df.head(10))
 df.to_csv("coincap_historical_prices.csv", index=False)
 
 bucket_name = "will_crypto"
@@ -55,7 +59,7 @@ job_config.source_format = bigquery.SourceFormat.CSV
 job_config.write_disposition = "WRITE_TRUNCATE"
 job_config.schema = [
     SchemaField("priceUSD", "STRING"),
-    SchemaField("time", "INTEGER"),
+    SchemaField("time", "STRING"),
     SchemaField("date", "STRING"),
     SchemaField("id", "STRING")
 ]

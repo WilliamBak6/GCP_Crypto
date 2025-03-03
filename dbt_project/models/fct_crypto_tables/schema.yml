@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: fct_coincap_prices
+    config: 
+      materialized: table  

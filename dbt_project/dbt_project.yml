@@ -43,3 +43,7 @@ models:
     dim_crypto_tables:
       +materialized: table
       +schema: dim_crypto_tables
+    
+    fct_crypto_tables:
+      +materialized: table
+      +schema: fct_crypto_tables
