@@ -47,3 +47,7 @@ models:
     fct_crypto_tables:
       +materialized: table
       +schema: fct_crypto_tables
+    
+    analytics_tables:
+      +materialized: table
+      +schema: analytics_tables 
